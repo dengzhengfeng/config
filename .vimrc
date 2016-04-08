@@ -11,6 +11,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
+Plugin 'fatih/vim-go'
 set laststatus=2
 
 " All of your Plugins must be added before the following line
@@ -20,8 +21,10 @@ filetype plugin indent on    " required
 Bundle 'Valloric/YouCompleteMe'
 " https://github.com/Valloric/YouCompleteMe
 
-
-
+" Bundle 'altercation/vim-colors-solarized'
+" syntax enable
+" set background=dark
+" colorscheme solarized
 
 " 调整粘贴时的文本缩进
 function! WrapForTmux(s)
@@ -45,3 +48,4 @@ function! XTermPasteBegin()
 endfunction
 
 inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
+set nu
